@@ -1,0 +1,39 @@
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { SharedService } from '../services/shared.service';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
+})
+export class HeaderComponent implements OnInit, OnDestroy {
+  navClass: string;
+  brandImage: string = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABuCAQAAACgwkH3AAAA40lEQVR42u3SAQ0AAAzCsOPf9G0Q0kpYloMhkQBDg6HB0GBoDA2GBkODocHQGBoMDYYGQ4OhMTQYGgwNhgZDY2gwNBgaDA2GxtBgaDA0GBoMjaHB0GBoMDQYGkODocHQYGgMDYYGQ4OhwdAYGgwNhgZDg6ExNBgaDA2GBkNjaDA0GBoMDYbG0GBoMDQYGgyNocHQYGgwNBgaQ4OhwdBgaDA0hgZDg6HB0BgaDA2GBkODoTE0GBoMDYYGQ2NoMDQYGgwNhsbQYGgwNBgaDI2hwdBgaDA0GBpDg6HB0GBoMDSGhmYPY/MAb585hNQAAAAASUVORK5CYII="
+  searchInputPlaceholderText: string = "Search or post...";
+  mobile: boolean;
+
+  subscription: Subscription;
+
+  constructor(private service: SharedService) {
+    this.subscription = this.screenResolutionSub()
+  }
+
+  ngOnInit(): void {
+    this.subscription = this.screenResolutionSub()
+  }
+
+  screenResolutionSub() {
+    return this.service.screenResolution.subscribe((val: number) => {
+      this.mobile = val < 768 ? true : false;
+      this.navClass = val < 768 ? "mobile" : "";
+      this.brandImage = val < 768 ? "../../assets/media/logo-mobile.png" : "../../assets/media/logo-main.png";
+      this.searchInputPlaceholderText = this.mobile ? "Search or post..." : "Location"
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
+  }
+
+}
