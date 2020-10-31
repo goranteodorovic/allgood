@@ -1,11 +1,11 @@
 <div id="navigation" [ngClass]="navClass">
     <div class="container">
-            <nav class="navbar">
-                <a href="javascript:void(0)" class="navbar-brand">
+            <nav class="navbar d-flex j-c-spacebetween">
+                <a href="javascript:void(0)" class="navbar-brand w-30">
                     <img [src]="brandImage" alt="allgood logo">
                 </a>
 
-                <ul class="navbar-nav navbar-left">
+                <ul class="navbar-nav navbar-left d-flex j-c-center w-40">
                     <li class="nav-item current-item">
                         <a href="javascript:void(0)" class="active">Search items</a>
                     </li>
@@ -14,7 +14,7 @@
                     </li>
                 </ul>
 
-                <ul class="navbar-nav navbar-right">
+                <ul class="navbar-nav navbar-right d-flex j-c-flexend w-30">
                     <li class="nav-item no-underline">
                         <a href="javascript:void(0)"><fa-icon [icon]="faEnvelope"></fa-icon></a>
                     </li>
@@ -43,7 +43,7 @@
 
             <div class="navbar-forms">
                 <div class="search-form">
-                    <form action="">
+                    <form action="" class="d-flex">
                         <input type="text" placeholder="{{ searchInputPlaceholderText }}" />
                         <input type="text" placeholder="Category" />
                         <input type="text" placeholder="Charity" />

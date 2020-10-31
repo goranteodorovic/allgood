@@ -1,11 +1,116 @@
+@import "../../../assets/style.vars.scss";
+
 #hero {
-    padding: 2rem 0;
+    position: relative;
+    padding: 2rem 0 0;
+    min-height: 33vh;
 
     .container {
 
         h1 {
             text-align: center;
             font-size: 2rem;
+        }
+
+        .icon-list {
+            
+            .list-element {
+                width: 90%;
+                height: 3rem;
+                border: 2px solid;
+                border-radius: 1rem;
+                margin: 0.35rem 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &.green,
+                &.green .icon-wrapper {
+                    border-color: $green;
+                }
+                &.purple,
+                &.purple .icon-wrapper {
+                    border-color: $purple;
+                }
+                &.red,
+                &.red .icon-wrapper {
+                    border-color: $red;
+                }
+
+                .icon-wrapper {
+                    border-radius: 1rem;
+                    margin-right: 0.75rem;
+                    border: 2px solid;
+                    color: $blue;
+
+                    &.green {
+                        background-color: $green;
+                    }
+                    &.purple {
+                        background-color: $purple;
+                    }
+                    &.red {
+                        background-color: $red;
+                    }
+
+                    fa-icon {
+                        font-size: 1.75rem;
+                        width: 3rem;
+                        height: 3rem;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 2rem;
+                    }
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    padding-right: 1rem;
+                    line-height: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .bottom-elipse {
+        position: absolute;
+        bottom: -1.3rem;
+        width: 100%;
+        height: 1.5rem;
+        border-bottom-left-radius: 50% 100%;
+        border-bottom-right-radius: 50% 100%;
+        background-color: #22315b;
+    }
+}
+
+@media(max-width: $breakePoint) {
+
+    .w-50 {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #hero {
+
+        .container > div {
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100%;
+
+            .icon-list {
+                margin-top: 1.5rem;
+                margin-bottom
+
+                .list-element {
+                    width: 100%;
+                }
+            }
+        }
+
+        .bottom-elipse {
+            display: none;
         }
     }
 }

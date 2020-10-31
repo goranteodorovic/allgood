@@ -1,4 +1,51 @@
-$headerBlueColor: #22315b;
-$whiteColor: whitesmoke;
-$redColor: #dd5757;
+$white: whitesmoke;
+$red: #dd5757;
+$green: #22a47b;
+$blue: #22315b;
+$purple: #6767f4;
+
 $breakePoint: 767.75px;
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.a-c-center {
+    align-content: center;
+}
+.a-i-center {
+    align-items: center;
+}
+.j-c-center {
+    justify-content: center;
+}
+.j-c-spacebetween {
+    justify-content: space-between;
+}
+.j-c-flexend {
+    justify-content: flex-end;
+}
+.w-30 {
+    width: 30%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-90 {
+    width: 90%;
+}
+.ma-w-400p {
+    max-width: 400px;
+}
+.p-b-2 {
+    padding-bottom: 2rem;
+}
