@@ -1,0 +1,17 @@
+<div class="{{ containerClasses }} d-flex">
+    <img *ngIf="item.iconBefore != ''" class="arrow" alt="icon" src="{{ imagePath + item.iconBefore }}">
+
+    <div>
+        <img class="icon" src="{{ imagePath + item.icon }}" alt="icon">
+        <div class="block-text d-flex">
+            <h4 class="title">{{ item.title }}</h4>
+            <p>Register to post an item for sale. Register now!</p>
+        </div>
+    </div>
+
+    <img *ngIf="item.iconAfter" class="dash" alt="icon" src="{{ imagePath + item.iconAfter }}">
+</div>
+
+<div *ngIf="isLast && item.watchVideo" class="watch-video-line">
+    <img src="../../assets/media/watch-the-video-dashed.png" alt="watch-video-line">
+</div>

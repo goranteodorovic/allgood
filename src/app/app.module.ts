@@ -8,13 +8,17 @@ import { HeroComponent } from './header/hero/hero.component';
 
 import { SharedService } from './services/shared.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { IconBlockComponent } from './about-us/icon-block/icon-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavigationComponent,
-    HeroComponent
+    HeroComponent,
+    AboutUsComponent,
+    IconBlockComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,64 @@
+@import "../../assets/style.vars.scss";
+
+#about-us {
+    margin-top: 3rem;
+
+    .container {
+        & > h2 {
+            margin-bottom: 0.5rem;
+        }
+        & > p {
+            color: $red;
+        }
+        .separator {
+            width: 70px;
+            height: 2px;
+            background: #dbdbfc;
+            margin: 1rem auto 2rem;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            width: 960px;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+
+            &.line-2 {
+                margin-top: 70px;
+            }
+
+            .video-container {
+                position: relative;
+                width: 38%;
+            }
+        }
+    }
+}
+
+@media ($tabletQuery) {
+    #about-us .container .icons {
+        width: 100%;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+
+        &.line-2 {
+            margin-top: 2rem;
+
+            .video-container,
+            .video-container img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media ($finalQuery) {
+    #about-us .container .icons {
+        width: 1140px;
+
+        &.line-2 {
+            margin-top: 120px;
+        }
+    }
+}

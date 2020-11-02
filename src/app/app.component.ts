@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.service.screenResolution.emit(event.target.innerWidth)
-    console.log('resize')
   }
 
   constructor(private service: SharedService) { }

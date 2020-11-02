@@ -33,7 +33,7 @@
                         left: 0;
                         width: 0;
                         height: 2px;
-                        background-color: #fff;
+                        background-color: $white;
                         transition: all .3s cubic-bezier(.45,.03,.5,.95);
                     }
 
@@ -171,13 +171,13 @@
     }
 }
 
-@media(max-width: $breakePoint) {
+@media($mobileQuery) {
     .d-flex {
         flex-wrap: unset;
     }
 
     #navigation {
-        background-color: #fff;
+        background-color: $white;
     
         .container {
             display: flex;

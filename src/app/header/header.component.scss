@@ -3,4 +3,11 @@
 header {
     background-color: $blue;
     color: $white;
+    margin-bottom: 5rem;
+}
+
+@media ($tabletQuery) {
+    header {
+        margin-bottom: 3rem;
+    }
 }
