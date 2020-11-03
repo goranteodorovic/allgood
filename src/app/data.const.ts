@@ -23,13 +23,6 @@ export const HERO_LIST = [
 ]
 
 export const ABOUT_US = [
-    // {
-    //     iconBefore: "",
-    //     icon: "",
-    //     title: "",
-    //     text: "",
-    //     iconAfter: ""
-    // },
     {
         iconBefore: "arrow.png",
         icon: "icon-gray.png",
@@ -67,3 +60,16 @@ export const ABOUT_US = [
         watchVideo: true
     }
 ]
+
+export const IMAGE_TEXT = {
+    title: "Post an item for sale",
+    text: "To post an item for sale - please register<br/>or sign in if you're already registered with allgood.",
+    image: "",
+    buttons: [{
+        class: "btn btn-red",
+        text: "Sign Up"
+    }, {
+        class: "btn btn-transparent",
+        text: "Sign In"
+    }]
+}

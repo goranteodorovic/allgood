@@ -10,6 +10,7 @@ import { SharedService } from './services/shared.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { IconBlockComponent } from './about-us/icon-block/icon-block.component';
+import { ImageTextComponent } from './image-text/image-text.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IconBlockComponent } from './about-us/icon-block/icon-block.component';
     NavigationComponent,
     HeroComponent,
     AboutUsComponent,
-    IconBlockComponent
+    IconBlockComponent,
+    ImageTextComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,115 @@
+@import "../../assets/style.vars.scss";
+
+#image-text {
+
+    & > div {
+
+        .img-container {
+
+            div {
+                padding-right: 3rem;
+            }
+        }
+
+        .text-content {
+            flex-direction: column;
+
+            & > * {
+                padding-left: 3rem;
+                max-width: 333px;
+            }
+
+            .h2 {
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+
+            .buttons {
+                margin-top: 1rem;
+
+                button {
+                    font-size: 1.1rem;
+                    padding: .75rem 1.5rem;
+                    border-radius: 1rem;
+
+                    &:not(:last-of-type) {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ($tabletQuery) {
+    #image-text {
+
+        & > div {
+
+            .img-container {
+
+                div {
+                    padding-right: 1.5rem;
+                }
+            }
+
+            .text-content {
+
+                & > * {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media ($mobileQuery) {
+    #image-text {
+
+        & > div {
+            flex-direction: column-reverse;
+
+            .img-container {
+                width: 100%;
+
+                div {
+                    padding-right: unset;
+                }
+            }
+
+            .text-content {
+                width: 100%;
+                padding-bottom: 2.5rem;
+
+                & > * {
+                    padding-left: unset;
+                    max-width: 100%;
+                }
+
+                .buttons {
+                    button:not(:last-of-type) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ($finalQuery) {
+    #image-text {
+
+        & > div {
+    
+            .img-container {
+    
+                div {
+                    padding-right: 5rem;
+                }
+            }
+        }
+    }
+}

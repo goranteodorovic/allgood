@@ -3,14 +3,14 @@
 .icon-block {
     position: relative;
     width: 220px;
-    height: 300px;
+    height: 310px;
     display: flex;
     flex-wrap: wrap;
     z-index: 2;
 
     &.is-last.watch-video-included {
         position: absolute;
-        top: 360px;
+        top: 345px;
         right: 130px;
         z-index: 3;
 
@@ -84,7 +84,6 @@
         &.is-last.watch-video-included {
             position: relative;
             width: 220px;
-            height: 300px;
             top: unset;
             right: unset;
             margin-right: unset;
@@ -113,6 +112,7 @@
         &.is-last.watch-video-included {
             top: 420px;
             right: 200px;
+            height: 320px;
         }
 
         .icon {
