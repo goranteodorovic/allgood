@@ -1,4 +1,4 @@
-$darkgray: #A9A9A9;
+@import "./assets/style.vars.scss";
 
 /* You can add global styles to this file, and also import other style files */
 /*
@@ -23,7 +23,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 article, aside, details, figcaption, figure, 
@@ -73,5 +74,151 @@ a {
     :hover, :visited {
         text-decoration: inherit; /* no underline */
     }
+}
+
+@media ($finalQuery) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+// font sizes
+h1 {
+    font-size: 2rem;
+    line-height: 2.15rem;
+}
+h2 {
+    font-size: 1.7rem;
+    line-height: 1.85rem;
+}
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.65rem;
+}
+h4 {
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+}
+h5 {
+    font-size: 1.1rem;
+    line-height: 1.4rem; 
+}
+p, span, a {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+@media ($mobileQuery) {
+    p, span, a {
+        font-size: 0.9rem;
+    }
+}
+@media ($finalQuery) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+    }
+    h2 {
+        font-size: 1.9rem;
+        line-height: 2.1rem;
+    }
+    h3 {
+        font-size: 1.55rem;
+        line-height: 1.75rem;
+    }
+    h4 {
+        font-size: 1.3rem;
+        line-height: 1.55rem;
+    }
+    h5 {
+        font-size: 1.15rem;
+        line-height: 1.45rem; 
+    }
+    // p, span, a {
+    //     font-size: 1.1rem;
+    // }
+}
+// colors
+.bgd-primary {
+    background-color: $primaryColor;
+}
+
+.primary-colors {
+    background-color: $primaryColor;
+    color: $primaryTextColor;
+}
+.primary-colors-inverted {
+    background-color: $primaryTextColor;
+    color: $primaryColor;
+}
+
+.red {
+    color: $red;
+}
+
+.btn {
+    color: $primaryTextColor;
+    border: 1px solid $primaryTextColor;
+}
+.btn-red {
+    background-color: $red;
+    border-color: $red;
+}
+.btn-transparent {
+    background-color: transparent;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.a-c-center {
+    align-content: center;
+}
+.a-i-center {
+    align-items: center;
+}
+.j-c-center {
+    justify-content: center;
+}
+.j-c-spacebetween {
+    justify-content: space-between;
+}
+.j-c-flexend {
+    justify-content: flex-end;
+}
+.w-30 {
+    width: 30%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-90 {
+    width: 90%;
+}
+.m-0-auto {
+    margin: 0 auto;
+}
+.p-tb-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.ma-w-400p {
+    max-width: 400px;
+}
+.p-b-2 {
+    padding-bottom: 2rem;
+}
+
+.center {
+    text-align: center;
 }
 

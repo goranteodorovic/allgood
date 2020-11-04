@@ -1,0 +1,29 @@
+<section id="featured-items" class="p-tb-3">
+    <div class="container">
+        <h2 class="center">Featured items</h2>
+
+        <div class="swiper-container" [swiper]="config">
+            <div class="swiper-wrapper">
+                <div *ngFor="let item of items; let i = index;" class="swiper-slide">
+                    <div class="preview-image">
+                        <img src="{{ imagePath + item.image }}" alt="{{ item.name }}">
+                    </div>
+                    <div class="text-content">
+                        <h4>{{ item.name }}</h4>
+                        <h5>{{ item.author }}</h5>
+                        <p>{{ item.description }}</p>
+                        <h3>${{ item.price }}</h3>
+                    </div>
+                    <div class="cta j-c-center">
+                        <a href="javascript:void(0)" class="d-flex j-c-center align-center w-100">
+                            <span><fa-icon [icon]="faHandHoldingHeart"></fa-icon> Sick Kids</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button swiper-button-prev"></div>
+        <div class="swiper-button swiper-button-next"></div>
+    </div>
+</section>

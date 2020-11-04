@@ -1,0 +1,86 @@
+@import "../../assets/style.vars.scss";
+@import "~swiper/swiper-bundle.css";
+
+.container {
+    position: relative;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .swiper-container {
+
+        .swiper-wrapper {
+    
+            .swiper-slide {
+    
+                .preview-image {
+                    width: inherit;
+                    padding-top: 56.25%;
+                    position: relative;
+                    border-radius: 20px 20px 0 0;
+                    overflow: hidden;
+    
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .text-content {
+                    background-color: #f4f5f9;
+                    color: $primaryColor;
+                    padding: 1rem 1.25rem;
+    
+                    h4 {
+                        margin: 1rem 0 1.75rem;
+                    }
+                    h5, p {
+                        margin: 1rem 0;
+                    }
+                }
+    
+                .cta {
+                    width: 100%;
+                    height: 10%;
+                    background: #c2c6d3;
+                    cursor: pointer;
+                    padding: .5rem 1rem;
+                    border-radius: 0 0 20px 20px;
+    
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+    
+            }
+        }
+    }
+    
+    .swiper-button {
+        border: 1px solid #c2c6d3;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-top: -1.25rem;
+        background-color: #fff;
+        box-shadow: -1px 0px 7px #c2c6d3;
+    }
+    .swiper-button-prev {
+        margin-left: -2.2rem;
+    }
+    .swiper-button-next {
+        margin-right: -2.2rem;
+    }
+}
+
+@media ($mobileQuery) {
+    .container .swiper-container .swiper-wrapper .swiper-slide .text-content {
+        padding: 1.25rem 2rem;
+    }
+}

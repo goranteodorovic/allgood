@@ -11,6 +11,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { IconBlockComponent } from './about-us/icon-block/icon-block.component';
 import { ImageTextComponent } from './image-text/image-text.component';
+import { FeaturedItemsComponent } from './featured-items/featured-items.component';
+
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,13 @@ import { ImageTextComponent } from './image-text/image-text.component';
     HeroComponent,
     AboutUsComponent,
     IconBlockComponent,
-    ImageTextComponent
+    ImageTextComponent,
+    FeaturedItemsComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SwiperModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

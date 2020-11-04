@@ -2,8 +2,6 @@ import { faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons';
 import { faMobile } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-declare var require: any;
-
 export const HERO_LIST = [
     {
         icon: faHandHoldingUsd,
@@ -27,35 +25,35 @@ export const ABOUT_US = [
         iconBefore: "arrow.png",
         icon: "icon-gray.png",
         title: "Post an item",
-        text: "Lorem ipsum dolor sit",
+        description: "Register to post an item for sale. <a href='javascript:void(0)' class='red'>Register now!</a>",
         iconAfter: "dashed-line-gold.png"
     },
     {
         iconBefore: "",
         icon: "icon-gold.png",
         title: "Select an Organization",
-        text: "Lorem ipsum dolor sit",
+        description: "Register to post an item for sale. <a href='javascript:void(0)' class='red'>Register now!</a>",
         iconAfter: "dashed-line-gold.png"
     },
     {
         iconBefore: "",
         icon: "icon-green.png",
         title: "Buyer Makes the Payment",
-        text: "Lorem ipsum dolor sit",
+        description: "Register to post an item for sale. <a href='javascript:void(0)' class='red'>Register now!</a>",
         iconAfter: "dashed-line-gold.png"
     },
     {
         iconBefore: "",
         icon: "icon-purple.png",
         title: "Post an Item",
-        text: "Lorem ipsum dolor sit",
+        description: "Register to post an item for sale. <a href='javascript:void(0)' class='red'>Register now!</a>",
         iconAfter: "dashed-line-gold.png"
     },
     {
         iconBefore: "",
         icon: "heart.png",
         title: "Donate",
-        text: "Lorem ipsum dolor sit",
+        description: "AllGood send the proceeds dorectly to the charity-campaign you choose to support",
         iconAfter: "",
         watchVideo: true
     }

@@ -5,7 +5,7 @@
         <img class="icon" src="{{ imagePath + item.icon }}" alt="icon">
         <div class="block-text d-flex">
             <h4 class="title">{{ item.title }}</h4>
-            <p>Register to post an item for sale. Register now!</p>
+            <p [innerHTML]="item.description"></p>
         </div>
     </div>
 

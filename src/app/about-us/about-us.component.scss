@@ -1,14 +1,10 @@
 @import "../../assets/style.vars.scss";
 
 #about-us {
-    // margin-top: 3rem;
 
     .container {
         & > h2 {
             margin-bottom: 0.5rem;
-        }
-        & > h5 {
-            color: $red;
         }
         .separator {
             width: 70px;
