@@ -16,13 +16,13 @@ export class FeaturedItemsComponent implements OnInit {
     direction: 'horizontal',
     allowTouchMove: true,
     slidesPerView: 4,
-    loop: true,
+    loop: false,
     spaceBetween: 30,
     breakpoints:{
-      0: { slidesPerView: 1 },
-      576: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      992: { slidesPerView: 4 }
+      0: { slidesPerView: 1.3 },
+      576: { slidesPerView: 2.25 },
+      992: { slidesPerView: 3.25 },
+      1100: { slidesPerView: 4.25 }
     },
     navigation: {
       nextEl: '.swiper-button-next',

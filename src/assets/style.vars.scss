@@ -1,17 +1,24 @@
 $white: whitesmoke;
-$darkgray: #A9A9A9;
+// $gray: #A9A9A9;
+// $darkgray: #666;
 $red: #dd5757;
 $green: #22a47b;
-$blue: #22315b;
+// $blue: #22315b;
 $purple: #6767f4;
 
+$lightGray: #f4f5f9;
+$gray: #c2c6d3;
+$darkGray: #666666;
+
 $primaryColor: #22315b;
-$primaryTextColor: #f5f5f5;
+$primaryTextColor: #f4f5f9;
 
 $breakePoint: 767.75px;
 
 // Media queries
 $mobileQuery: "max-width: 767.75px";
-$tabletQuery: "max-width: 991.75px";
-$desktopQuery: "max-width: 1199.75px";
-$finalQuery: "min-width: 1200px";
+$tabletQuery: "max-width: 1099.75px";
+$desktopQuery: "min-width: 1100px";
+$largeQuery: "min-width: 1280px";
+$xLargeQuery: "min-width: 1400px";
+$skyIsTheLimit: "min-width: 1600px";

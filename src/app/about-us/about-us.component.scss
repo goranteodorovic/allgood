@@ -1,35 +1,36 @@
 @import "../../assets/style.vars.scss";
 
 #about-us {
-
     .container {
-        & > h2 {
-            margin-bottom: 0.5rem;
-        }
-        .separator {
-            width: 70px;
-            height: 2px;
-            background: #dbdbfc;
-            margin: 1rem auto 2rem;
-        }
-        .icons {
-            display: flex;
-            justify-content: space-between;
-            width: 960px;
-            max-width: 100%;
-            margin: 0 auto;
-            position: relative;
-
-            &.line-2 {
-                margin-top: 90px;
+        .w-90 {
+            & > h2 {
+                margin-bottom: 0.5rem;
             }
-
-            .video-container {
+            .separator {
+                width: 70px;
+                height: 2px;
+                background: #dbdbfc;
+                margin: 1rem auto 2rem;
+            }
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                width: 960px;
+                max-width: 100%;
+                margin: 0 auto;
                 position: relative;
-                width: 38%;
 
-                h2 {
-                    display: none;
+                &.line-2 {
+                    margin-top: 90px;
+                }
+
+                .video-container {
+                    position: relative;
+                    width: 38%;
+
+                    h2 {
+                        display: none;
+                    }
                 }
             }
         }
@@ -37,7 +38,7 @@
 }
 
 @media ($tabletQuery) {
-    #about-us .container .icons {
+    #about-us .container .w-90 .icons {
         width: 100%;
         overflow-x: scroll;
         flex-wrap: nowrap;
@@ -58,12 +59,34 @@
     }
 }
 
-@media ($finalQuery) {
-    #about-us .container .icons {
+// @media ($finalQuery) {
+@media ($largeQuery) {
+    #about-us .container .w-90 .icons {
         width: 1140px;
 
         &.line-2 {
-            margin-top: 100px;
+            // margin-top: 100px;
+            margin-top: 120px;
         }
     }
 }
+
+@media ($skyIsTheLimit) {
+    #about-us .container .w-90 .icons {
+        width: 1200px;
+    }
+}
+
+// @media ($skyIsTheLimit) {
+//     #about-us .container .icons {
+//         width: 1280px;
+
+//         &.line-2 {
+//             margin-top: 100px;
+
+//             .video-container {
+//                 width: 35%;
+//             }
+//         }
+//     }
+// }

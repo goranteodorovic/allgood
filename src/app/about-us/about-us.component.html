@@ -1,23 +1,25 @@
 <section id ="about-us" class="p-tb-3">
     <div class="container">
-        <h2 class="center">How it Works</h2>
-        <h5 class="center red">Learn more about AllGood</h5>
-        <div class="separator"></div>
+        <div class="w-90 m-0-auto">
+            <h2 class="center">How it Works</h2>
+            <h5 class="center red">Learn more about AllGood</h5>
+            <div class="separator"></div>
 
-        <div class="icons line-1">
-            <app-icon-block 
-                *ngFor="let item of iconBlockItems; let index = index;" 
-                [item]="item"
-                [index]="index+1"
-                [isLast]="index+1 == iconBlockItems.length"></app-icon-block>
-        </div>
+            <div class="icons line-1">
+                <app-icon-block 
+                    *ngFor="let item of iconBlockItems; let index = index;" 
+                    [item]="item"
+                    [index]="index+1"
+                    [isLast]="index+1 == iconBlockItems.length"></app-icon-block>
+            </div>
 
-        <div class="icons line-2">
-            <div class="video-container">
-                <h2>Watch the video</h2>
-                <a href="https://www.youtube.com/watch?v=pFZgrlK9Rew" target="_blank">
-                    <img src="../../assets/media/video-preview.png" alt="video image">
-                </a>
+            <div class="icons line-2">
+                <div class="video-container">
+                    <h2>Watch the video</h2>
+                    <a href="https://www.youtube.com/watch?v=pFZgrlK9Rew" target="_blank">
+                        <img src="../../assets/media/video-preview.png" alt="video image">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

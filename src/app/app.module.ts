@@ -14,6 +14,7 @@ import { ImageTextComponent } from './image-text/image-text.component';
 import { FeaturedItemsComponent } from './featured-items/featured-items.component';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { FundraiseComponent } from './fundraise/fundraise.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     AboutUsComponent,
     IconBlockComponent,
     ImageTextComponent,
-    FeaturedItemsComponent
+    FeaturedItemsComponent,
+    FundraiseComponent
   ],
   imports: [
     BrowserModule,

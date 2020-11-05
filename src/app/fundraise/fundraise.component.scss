@@ -1,0 +1,136 @@
+@import "../../assets/style.vars.scss";
+
+#fundraise {
+    margin: 3rem auto 5rem;
+
+    & > div.w-90 {
+        margin: 0 auto;
+        margin-right: 0;
+        position: relative;
+
+        .text-content {
+            padding: 0 30% 0 15%;
+
+            p {
+                margin-top: 2rem;
+                color: $darkGray;
+            }
+
+            .buttons {
+                margin-top: 2rem;
+
+                button {
+                    font-size: 1.1rem;
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .double-circle {
+            width: 11rem;
+            height: 11rem;
+            border-radius: 50%;
+            background-color: transparent;
+            position: absolute;
+            border: 3px solid;
+            bottom: -4rem;
+            left: -4rem;
+            border: 3px solid #d3f7ec;
+            border-radius: 50%;
+            -webkit-animation-name: color_change;
+            animation-name: color_change;
+            -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            border: 3px solid $primaryColor;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 4rem;
+                height: 4rem;
+                border: 3px solid #d3f7ec;
+                border-radius: 50%;
+                -webkit-animation-name: color_change;
+                animation-name: color_change;
+                -webkit-animation-duration: 4s;
+                animation-duration: 4s;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                border: 3px solid $primaryColor;
+            }
+        }
+    }
+}
+
+@media ($tabletQuery) {
+    #fundraise {
+    
+        & > div.w-90 {
+    
+            .text-content {
+
+                p {
+                    margin-right: -25%;
+                }
+            }
+        }
+    }
+}
+
+@media ($mobileQuery) {
+    #fundraise {
+    
+        & > div.w-90 {
+            width: 100%;
+
+            .text-content {
+                width: 80%;
+                padding: 0;
+
+                p {
+                    margin-right: unset;
+                }
+            }
+
+            .double-circle {
+                width: 10rem;
+                height: 10rem;
+                top: auto;
+                bottom: -2.2rem;
+                left: auto;
+                right: -2.2rem;
+            }
+        }
+    }
+}
+
+
+@-webkit-keyframes color_change {
+	from { border-color: $primaryColor; }
+	to { border-color: $gray; }
+}
+@-moz-keyframes color_change {
+	from { border-color: $primaryColor; }
+	to { border-color: $gray; }
+}
+@-ms-keyframes color_change {
+	from { border-color: $primaryColor; }
+	to { border-color: $gray; }
+}
+@-o-keyframes color_change {
+	from { border-color: $primaryColor; }
+	to { border-color: $gray; }
+}
+@keyframes color_change {
+	from { border-color: $primaryColor; }
+	to { border-color: $gray; }
+}

@@ -40,7 +40,7 @@
                 .icon-wrapper {
                     border-radius: 1rem;
                     margin-right: 0.75rem;
-                    color: $blue;
+                    color: $primaryColor;
 
                     &.green {
                         background-color: $green;
@@ -112,7 +112,7 @@
     }
 }
 
-@media ($finalQuery) {
+@media ($largeQuery) {
     #hero {
     
         .container {
