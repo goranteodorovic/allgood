@@ -1,0 +1,65 @@
+@import "../../assets/style.vars.scss";
+
+#footer {
+    &.p-tb-3 {
+        padding-bottom: 2rem;
+    }
+    & > div {
+        gap: 3rem;
+
+        .content-wrapper {
+            .text-content {
+                gap: 1.25rem;
+
+                h5 {
+                    font-weight: bold;
+                }
+
+                &.content-left {
+                    .inner {
+                        gap: 1.25rem;
+    
+                        .img-container {
+                            max-width: 120px;
+                        }
+    
+                        .social-media-icons {
+                            gap: 1.5rem;
+    
+                            a {
+                                font-size: 1.5rem;
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            column-gap: 1.5rem;
+        }
+    }
+}
+
+@media ($mobileQuery) {
+    #footer > div {
+        gap: 3.5rem;
+
+        .content-wrapper {
+            flex-direction: column;
+            gap: 3.5rem;
+
+            .text-content,
+            .text-content .inner {
+                width: 100%;
+                max-width: 480px;
+                gap: 1rem;
+            }
+        }
+        .copyright {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+}

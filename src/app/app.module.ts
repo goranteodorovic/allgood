@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './header/navigation/navigation.component';
-import { HeroComponent } from './header/hero/hero.component';
+import { HeroComponent } from './hero/hero.component';
 
 import { SharedService } from './services/shared.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,18 +14,19 @@ import { FeaturedItemsComponent } from './featured-items/featured-items.componen
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { FundraiseComponent } from './fundraise/fundraise.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavigationComponent,
     HeroComponent,
     AboutUsComponent,
     IconBlockComponent,
     ImageTextComponent,
     FeaturedItemsComponent,
-    FundraiseComponent
+    FundraiseComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

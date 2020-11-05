@@ -130,7 +130,7 @@ p, span, a {
 }
 
 /*
-    Colors and style
+    Colors
 */
 .bgd-primary {
     background-color: $primaryColor;
@@ -144,7 +144,7 @@ p, span, a {
     background-color: $lightGray;
     color: $primaryColor;
 
-    p, span {
+    p, span, a {
         color: $darkGray;
     }
 }
@@ -152,7 +152,7 @@ p, span, a {
     background-color: $gray;
     color: $primaryColor;
 
-    span, p {
+    p, span, a {
         color: $primaryColor;
     }
 }
@@ -198,6 +198,9 @@ p, span, a {
 .j-c-flexend {
     justify-content: flex-end;
 }
+.w-25 {
+    width: 25%;
+}
 .w-30 {
     width: 30%;
 }
@@ -207,14 +210,26 @@ p, span, a {
 .w-50 {
     width: 50%;
 }
+.w-60 {
+    width: 60%;
+}
+.w-70 {
+    width: 70%;
+}
 .w-80 {
     width: 80%;
 }
 .w-90 {
     width: 90%;
 }
+.w-100 {
+    width: 100%;
+}
 .m-0-auto {
     margin: 0 auto;
+}
+.m-b-1 {
+    margin-bottom: 1rem;
 }
 .p-tb-3 {
     padding-top: 3rem;

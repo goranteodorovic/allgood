@@ -28,17 +28,13 @@
             }
         }
 
-        .double-circle {
-            width: 11rem;
-            height: 11rem;
-            border-radius: 50%;
-            background-color: transparent;
+        .double-circle,
+        .double-circle::after {
             position: absolute;
-            border: 3px solid;
-            bottom: -4rem;
-            left: -4rem;
-            border: 3px solid #d3f7ec;
             border-radius: 50%;
+            border: 3px solid $primaryColor;
+
+            border: 3px solid #d3f7ec;
             -webkit-animation-name: color_change;
             animation-name: color_change;
             -webkit-animation-duration: 4s;
@@ -46,26 +42,22 @@
             -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
-            border: 3px solid $primaryColor;
+        }
+
+        .double-circle {
+            width: 11rem;
+            height: 11rem;
+            background-color: transparent;
+            bottom: -4rem;
+            left: -4rem;
 
             &::after {
                 content: "";
-                position: absolute;
+                width: 4rem;
+                height: 4rem;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 4rem;
-                height: 4rem;
-                border: 3px solid #d3f7ec;
-                border-radius: 50%;
-                -webkit-animation-name: color_change;
-                animation-name: color_change;
-                -webkit-animation-duration: 4s;
-                animation-duration: 4s;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-                animation-direction: alternate-reverse;
-                border: 3px solid $primaryColor;
             }
         }
     }
@@ -95,6 +87,10 @@
             .text-content {
                 width: 80%;
                 padding: 0;
+
+                .buttons {
+                    z-index: 1;
+                }
 
                 p {
                     margin-right: unset;

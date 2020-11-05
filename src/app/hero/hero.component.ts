@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SharedService } from 'src/app/services/shared.service';
-import { HERO_LIST } from '../../data.const';
+import { HERO_LIST } from '../data.const';
 
 
 @Component({
