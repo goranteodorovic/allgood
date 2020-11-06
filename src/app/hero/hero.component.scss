@@ -9,7 +9,7 @@
     color: $white;
     margin-bottom: 2rem;
 
-    .container {
+    .w-90 {
         padding-bottom: 5rem;
 
         h1 {
@@ -84,7 +84,7 @@
         height: 1.5rem;
         border-bottom-left-radius: 50% 100%;
         border-bottom-right-radius: 50% 100%;
-        background-color: #22315b;
+        background-color: $primaryColor;
     }
 }
 
@@ -96,7 +96,7 @@
 
     #hero {
 
-        .container {
+        .w-90 {
             padding-bottom: 2.5rem;
 
             & > div {
@@ -124,7 +124,7 @@
 @media ($largeQuery) {
     #hero {
     
-        .container {
+        .w-90 {
 
             .inner {
                 width: 1140px;
@@ -151,8 +151,6 @@
                     }
                 }
             }
-    
-
         }
     }
 }

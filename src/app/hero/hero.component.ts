@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SharedService } from 'src/app/services/shared.service';
-import { HERO_LIST } from '../data.const';
+import { faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons';
+import { faMobile } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,7 +14,23 @@ import { HERO_LIST } from '../data.const';
 export class HeroComponent implements OnInit {
   image: string;
   subscription: Subscription;
-  heroList = HERO_LIST
+  heroList = [
+    {
+        icon: faHandHoldingUsd,
+        text: "Turn your stuff into cach donations",
+        color: "green"
+    },
+    {
+        icon: faMobile,
+        text: "Shop allgood market - and support charity",
+        color: "purple"
+    },
+    {
+        icon: faHeart,
+        text: "A new way to fund raise",
+        color: "red"
+    }
+  ]
 
   constructor(private service: SharedService) {
     this.subscription = this.screenResolutionSub()

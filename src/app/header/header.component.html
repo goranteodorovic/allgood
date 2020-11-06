@@ -1,55 +1,57 @@
-<header>
+<header class="primary-colors">
 
     <div id="navigation">
-        <div class="container">
+        <div class="w-90 m-0-auto d-flex flex-column">
                 <nav class="navbar d-flex j-c-spacebetween">
-                    <a href="javascript:void(0)" class="navbar-brand w-30">
+                    <a class="navbar-brand w-30">
                         <img [src]="brandImage" alt="allgood logo">
                     </a>
     
                     <ul class="navbar-nav navbar-left d-flex j-c-center w-40">
-                        <li class="nav-item current-item">
-                            <a href="javascript:void(0)" class="active">Search items</a>
+                        <li class="nav-item d-flex current-item">
+                            <a class="active">Search items</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0)">Post items</a>
+                        <li class="nav-item d-flex">
+                            <a>Post items</a>
                         </li>
                     </ul>
     
                     <ul class="navbar-nav navbar-right d-flex j-c-flexend w-30">
-                        <li class="nav-item no-underline">
-                            <a href="javascript:void(0)"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+                        <li class="nav-item d-flex no-underline">
+                            <a><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         </li>
-                        <li class="nav-item no-underline">
-                            <a href="javascript:void(0)"><fa-icon [icon]="faBell"></fa-icon></a>
+                        <li class="nav-item d-flex no-underline with-notification">
+                            <a><i class="fa fa-bell" aria-hidden="true"></i></a>
                         </li>
-                        <li class="nav-item no-underline dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0)">
+                        <li class="nav-item d-flex no-underline dropdown">
+                            <a class="dropdown-toggle">
                                 <img src="../../../assets/media/me-small.jpg" />
                                 <span>goran</span>
-                                <fa-icon [icon]="faChevronDown"></fa-icon>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <p class="logged-user">Goran Teodorovic</p>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Your profile</a>
-                                <a class="dropdown-item" href="#">Lorem ipsum</a>
-                                <a class="dropdown-item" href="#">Dolor sit omet</a>
+                                <a class="dropdown-item">Your profile</a>
+                                <a class="dropdown-item">Lorem ipsum</a>
+                                <a class="dropdown-item">Dolor sit omet</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Help</a>
-                                <a class="dropdown-item" href="#">Sign out</a>
+                                <a class="dropdown-item">Help</a>
+                                <a class="dropdown-item">Sign out</a>
                             </div>
                         </li>
                     </ul>
                 </nav>
     
                 <div class="navbar-forms">
-                    <div class="search-form">
+                    <div class="search-form d-flex">
                         <form action="" class="d-flex">
                             <input type="text" placeholder="{{ searchInputPlaceholderText }}" />
                             <input type="text" placeholder="Category" />
                             <input type="text" placeholder="Charity" />
-                            <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+                            <button class="btn btn-red d-flex j-c-center a-i-center"
+                                type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <!-- <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button> -->
                         </form>
                     </div>
                 </div>

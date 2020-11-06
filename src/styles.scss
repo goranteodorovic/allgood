@@ -49,34 +49,42 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover, &:visited {
+        text-decoration: inherit;
+        cursor: pointer;
+    }
+}
+
+button:focus {
+    outline: unset;
+}
+
 
 /*
+    ////////////
     Custom style
+    ////////////
 */
 html {
     overflow-x: hidden;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
-
 img {
     max-width: 100%;
     max-height: 100%;
 }
 
-a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
-
-    :hover, :visited {
-        text-decoration: inherit; /* no underline */
-    }
-}
-
-// font sizes
+/*
+    Font size
+    ////////////////
+*/
 h1 {
     font-size: 2rem;
     line-height: 2.15rem;
@@ -99,7 +107,10 @@ h5 {
 }
 p, span, a {
     font-size: 1rem;
-    line-height: 1.3rem;
+    line-height: 1.4rem;
+}
+a:hover, a:focus {
+    opacity: 0.5;
 }
 @media ($mobileQuery) {
     p, span, a {
@@ -130,7 +141,8 @@ p, span, a {
 }
 
 /*
-    Colors
+    Color
+    ///////////
 */
 .bgd-primary {
     background-color: $primaryColor;
@@ -139,31 +151,37 @@ p, span, a {
     background-color: $primaryColor;
     color: $lightGray;
 }
-
-.primary-colors-inverted {
-    background-color: $lightGray;
+.primary-colors-inverted,
+.primary-colors-inverted-light {
     color: $primaryColor;
 
     p, span, a {
         color: $darkGray;
     }
 }
-.primary-colors-gray {
-    background-color: $gray;
-    color: $primaryColor;
-
-    p, span, a {
-        color: $primaryColor;
-    }
+.primary-colors-inverted {
+    background-color: $lightGray;
 }
-
-.red {
+.primary-colors-inverted-light {
+    background-color: #fff;
+}
+.red,
+a.red {
     color: $red;
 }
 
+/*
+    Button
+    ////////////
+*/
 .btn {
     color: $primaryTextColor;
     border: 1px solid $primaryTextColor;
+    transition: all .3s ease;
+    transform: scale(1);
+}
+.btn:hover {
+    transform: scale(.95);
 }
 .btn-red {
     background-color: $red;
@@ -173,6 +191,10 @@ p, span, a {
     background-color: transparent;
 }
 
+/*
+    Flexbox
+    /////////////
+*/
 .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -183,6 +205,11 @@ p, span, a {
 .flex-row {
     flex-direction: row;
 }
+
+/*
+    Alignment
+    ///////////////
+*/
 .a-c-center {
     align-content: center;
 }
@@ -198,6 +225,11 @@ p, span, a {
 .j-c-flexend {
     justify-content: flex-end;
 }
+
+/*
+    Width
+    //////////
+*/
 .w-25 {
     width: 25%;
 }
@@ -225,6 +257,23 @@ p, span, a {
 .w-100 {
     width: 100%;
 }
+.ma-w-400p {
+    max-width: 400px;
+}
+@media ($mobileQuery) {
+    .w-90 {
+        width: 80%;
+
+        & > .w-90 {
+            width: 100%;
+        }
+    }
+}
+
+/*
+    Margin / Padding
+    ////////////////
+*/
 .m-0-auto {
     margin: 0 auto;
 }
@@ -235,34 +284,10 @@ p, span, a {
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
-.ma-w-400p {
-    max-width: 400px;
-}
 .p-b-2 {
     padding-bottom: 2rem;
 }
 
 .center {
     text-align: center;
-}
-
-
-.container {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-}
-@media ($mobileQuery) {
-    .w-90 {
-        width: 80%;
-    }
-
-    .container, .w-90 {
-        width: 80%;
-
-        & > .w-90 {
-            width: 100%;
-        }
-    }
-
 }

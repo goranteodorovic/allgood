@@ -1,61 +1,55 @@
 @import "../../assets/style.vars.scss";
 @import "~swiper/swiper-bundle.css";
 
-.container {
+.w-90 {
     position: relative;
 
     h2 {
         margin-bottom: 2rem;
     }
 
-    .swiper-container {
+    .swiper-container .swiper-wrapper  .swiper-slide {
+    
+        .preview-image {
+            width: 100%;
+            padding-top: 56.25%;
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
 
-        .swiper-wrapper {
-    
-            .swiper-slide {
-    
-                .preview-image {
-                    width: 100%;
-                    padding-top: 56.25%;
-                    position: relative;
-                    border-radius: 20px 20px 0 0;
-                    overflow: hidden;
-    
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-    
-                .text-content {
-                    color: $primaryColor;
-                    padding: 1rem 1.25rem;
-    
-                    h4 {
-                        margin: 1rem 0 1.75rem;
-                    }
-                    h5, p {
-                        margin: 1rem 0;
-                    }
-                }
-    
-                .cta {
-                    width: 100%;
-                    height: 10%;
-                    cursor: pointer;
-                    padding: .5rem 1rem;
-                    border-radius: 0 0 20px 20px;
-    
-                    a {
-                        font-size: 1rem;
-                    }
-                }
-    
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-content {
+            color: $primaryColor;
+            padding: 1rem 1.25rem;
+
+            h4 {
+                margin: 1rem 0 1.75rem;
+            }
+            h5, p {
+                margin: 1rem 0;
+            }
+        }
+
+        .cta {
+            width: 100%;
+            height: 10%;
+            cursor: pointer;
+            padding: .5rem 1rem;
+            border-radius: 0 0 20px 20px;
+            background-color: $gray;
+
+            a {
+                font-size: 1rem;
             }
         }
     }
@@ -83,7 +77,6 @@
 }
 
 @media (max-width: 575.75px) {
-    .container,
     .w-90 {
         width: 80%;
 
@@ -97,7 +90,6 @@
 }
 
 @media ($largeQuery) {
-    .container,
     .w-90 {
         position: relative;
     
@@ -105,14 +97,8 @@
             margin-bottom: 2rem;
         }
     
-        .swiper-container {
-    
-            .swiper-wrapper {
-        
-                .swiper-slide {
-                    padding: 0 .3rem;
-                }
-            }
+        .swiper-container .swiper-wrapper .swiper-slide {
+            padding: 0 .3rem;
         }
     }
 }

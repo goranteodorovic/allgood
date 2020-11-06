@@ -1,14 +1,12 @@
 @import "../../assets/style.vars.scss";
 
 header {
-    background-color: $primaryColor;
-    color: $white;
-
 
     #navigation {
         padding: 1rem 0;
     
-        .container {
+        & > div {
+            gap: 1rem;
     
             nav.navbar {
     
@@ -24,7 +22,6 @@ header {
     
                     .nav-item {
                         position: relative;
-                        display: flex;
                         align-items: flex-end;
     
                         &:not(:last-child) {
@@ -47,6 +44,26 @@ header {
                         &:not(.no-underline):hover:before {
                             width: 100%;
                         }
+
+                        &.with-notification a {
+                            position: relative;
+
+                            i:after {
+                                content: "2";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                transform: translate(8px, -13px);
+                                background-color: $red;
+                                border-radius: 16px;
+                                width: 16px;
+                                height: 16px;
+                                font-size: 14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        } 
     
                         & > a {
                             display: block;
@@ -64,7 +81,7 @@ header {
                                 & + span {
                                     padding-left: 45px;
     
-                                    & + fa-icon {
+                                    & + i {
                                         font-size: 10px;
                                         margin-left: 5px;
                                     }
@@ -123,11 +140,7 @@ header {
     
             .navbar-forms {
                 position: relative;
-                height: 2.5rem;
-                margin-top: .75rem;
-    
                 height: 50px;
-                margin-top: 15px;
             
                 .search-form {
                     left: 50%;
@@ -165,16 +178,10 @@ header {
                         }
             
                         button {
-                            width: 40px;
-                            height: 40px;
                             margin: 0 0 0 -1rem;
                             border: 0;
                             border-radius: 1rem;
-                            background-color: $red;
-                            color: $white;
-                            padding: 0;
-                            font-size: 16px;
-    
+                            font-size: 24px;
                             width: 50px;
                             height: 50px;
                         }
@@ -192,11 +199,10 @@ header {
     }
     header {
         #navigation {
-            background-color: $white;
+            background-color: #fff;
         
-            .container {
-                display: flex;
-                justify-content: space-between;
+            & > div {
+                flex-direction: row;
 
                 nav.navbar {
                     width: auto;
@@ -223,11 +229,9 @@ header {
                     right: 0;
                     margin: unset;
                     height: inherit;
-                    display: flex;
                     align-items: center;
                 
                     .search-form {
-                        display: flex;
                         position: relative;
                         left: unset;
                         transform: unset;
@@ -255,12 +259,6 @@ header {
                                 padding: 0 24px;
                                 border-radius: 10px;
                                 position: relative;
-                                font-size: 20px;
-
-                                fa-icon {
-                                    position: absolute;
-                                    transform: translate(-50%, -50%);
-                                }
                             }
                         }
                     }

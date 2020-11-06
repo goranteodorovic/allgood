@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SharedService } from '../services/shared.service';
-import { faSearch, faEnvelope, faBell, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +13,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   mobile: boolean;
 
   subscription: Subscription;
-
-  faSearch = faSearch;
-  faEnvelope = faEnvelope;
-  faBell = faBell;
-  faChevronDown = faChevronDown;
 
   constructor(private service: SharedService) {
     this.subscription = this.screenResolutionSub()
