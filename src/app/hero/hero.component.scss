@@ -3,7 +3,6 @@
 #hero {
     position: relative;
     padding: 2rem 0 0;
-    // min-height: 33vh;
 
     background-color: $primaryColor;
     color: $white;
@@ -46,6 +45,7 @@
                     border-radius: 1rem;
                     margin-right: 0.75rem;
                     color: $primaryColor;
+                    margin-left: -.1rem;
 
                     &.green {
                         background-color: $green;
